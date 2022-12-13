@@ -131,11 +131,13 @@ section{
   padding: 20px 40px;
   font-size: 1.5vw;
   font-weight: bold;
+  text-transform: uppercase;
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 50px;
   transition: 0.3s;
+  cursor: pointer;
 }
 .hero-btn:hover {
   background-color: var(--color-lighter);

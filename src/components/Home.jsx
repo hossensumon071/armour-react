@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 
 const Home = () => {
   return (
-    <div className="home" style={{backgroundImage: "url('https://images.unsplash.com/photo-1639322534617-51f7e2612f33?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60')"}}>
+    <div className="home" style={{backgroundImage: "url('https://images.unsplash.com/photo-1637947582297-24ccbef1bd19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1281&q=80')"}}>
       <Navbar/>
       <Hero/>
     </div>
