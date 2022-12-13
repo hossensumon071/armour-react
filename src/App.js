@@ -1,17 +1,21 @@
-import { Routes, Route} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Featured from "./components/Featured";
 import Home from "./components/Home";
-import { useSmothScroll } from "./Hooks/useSmothScroll";
+import Navbar from "./components/Navbar";
+import { useSmoothScroll } from "./hooks/useSmoothScroll";
 
-function App() {
-  useSmothScroll()
-  
+const App = () => {
+  useSmoothScroll();
+
   return (
     <div>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path='/' element={<Home />} />
+        <Route path='/featured' element={<Featured />} />
       </Routes>
     </div>
   );
-}
+};
 
 export default App;
