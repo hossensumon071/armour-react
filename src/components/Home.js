@@ -1,3 +1,4 @@
+import Blog from "./Blog";
 import Featured from "./Featured";
 import Hero from "./Hero";
 
