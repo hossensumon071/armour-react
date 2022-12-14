@@ -1,10 +1,8 @@
-import React from 'react';
-
-const NotFound = ({needFullHeight}) => {
+const NotFound = ({ needFullHeight }) => {
   return (
-    <section className={`${needFullHeight && "min-h-scrren"} not-found wrapper`}>
-      <h2 className="section-title">Not Found</h2>
-    </section>
+    <di className={`${needFullHeight && "min-h-scrren"} wrapper not-found`} >
+      <h1>404<br />Not Found</h1>
+    </di>
   );
 };
 

@@ -51,6 +51,7 @@ export const useGsapHeroTextUpStagger = (arr, delay = 0) => {
 export const useGsapFeatureShutterOneUnveil = (item, trig) => {
   useEffect(() => {
     const el = item.current;
+
     gsap.fromTo(
       el,
       {
@@ -74,6 +75,7 @@ export const useGsapFeatureShutterOneUnveil = (item, trig) => {
 export const useGsapFeatureShutterTwoUnveil = (item, trig) => {
   useEffect(() => {
     const el = item.current;
+
     gsap.fromTo(
       el,
       {
@@ -97,6 +99,7 @@ export const useGsapFeatureShutterTwoUnveil = (item, trig) => {
 export const useGsapFeatureShutterThreeUnveil = (item) => {
   useEffect(() => {
     const el = item.current;
+
     gsap.fromTo(
       el,
       {
@@ -117,25 +120,199 @@ export const useGsapFeatureShutterThreeUnveil = (item) => {
   }, []);
 };
 
+export const useGsapAboutHeading = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+    gsap.fromTo(
+      el,
+      {
+        y: "-100%",
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom center",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
 
+export const useGsapAboutImageShutter = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        left: 0,
+      },
+      {
+        left: "100%",
+        duration: 1.3,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom center",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+export const useGsapAboutItemDownStagger = (arr, trig) => {
+  useEffect(() => {
+    const el = arr.map((item) => item.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: "-100%",
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        stagger: 0.5,
+        ease: Expo.easeIn,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom center",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+export const useGsapAnsDetailsRef = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: "100%",
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1.5,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom center",
+          toggleActions: "play reverse play reverse",
+        },
+        delay: 1.5,
+      }
+    );
+  }, []);
+};
+
+export const useGsapGalleryImage = (item) => {
+  useEffect(() => {
+    const el = item.current;
+    gsap.fromTo(
+      el,
+      {
+        x: 0,
+        width: 0,
+      },
+      {
+        x: "30%",
+        width: "100%",
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: el,
+          start: "top center",
+          end: "bottom top",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+export const useGsapGalleryTitle = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+    gsap.fromTo(
+      el,
+      {
+        x: "30%",
+      },
+      {
+        x: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom top",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+export const useGsapGalleryCategory = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+    gsap.fromTo(
+      el,
+      {
+        x: "-100vw",
+      },
+      {
+        x: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom top",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
 
 export const useGsapFooterHeadline = (item, trig) => {
-  useEffect(()=> {
+  useEffect(() => {
     const el = item.current;
 
     gsap.fromTo(
       el,
       {
         y: "-100%",
+        opacity: 0,
       },
       {
         y: 0,
+        opacity: 1,
         duration: 1,
         ease: Expo.easeInOut,
         scrollTrigger: {
           trigger: trig.current,
           toggleActions: "play",
-        }
+        },
       }
     );
   }, []);
